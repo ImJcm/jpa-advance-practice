@@ -1,3 +1,4 @@
+/*
 package com.sparta.jpaadvance.relation;
 
 import com.sparta.jpaadvance.entity.Food;
@@ -137,9 +138,11 @@ public class ManyToOneTest {
 
         // 해당 고객이 주문한 음식 정보 조회
         //List<Food> foodList = user.getFoodList();
-        /*for (Food food : foodList) {
+
+        for (Food food : foodList) {
             System.out.println("food.getName() = " + food.getName());
             System.out.println("food.getPrice() = " + food.getPrice());
-        }*/
+        }
+
     }
-}
+}*/

@@ -1,3 +1,4 @@
+/*
 package com.sparta.jpaadvance.relation;
 
 import com.sparta.jpaadvance.entity.Food;
@@ -114,3 +115,4 @@ public class OneToOneTest {
         //System.out.println("food.getPrice() = " + food.getPrice());
     }
 }
+*/
