@@ -1,4 +1,29 @@
-//Ver. ManyToMany 양방향
+//Ver. 중간 테이블
+package com.sparta.jpaadvance.entity;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Getter
+@Setter
+@Table(name = "food")
+public class Food {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private double price;
+
+    @OneToMany(mappedBy = "food")
+    private List<Order> orderList = new ArrayList<>();
+}
+
+/*//Ver. ManyToMany 양방향
 package com.sparta.jpaadvance.entity;
 
 import jakarta.persistence.*;
@@ -29,7 +54,7 @@ public class Food {
         this.userList.add(user); // 외래 키(연관 관계) 설정
         user.getFoodList().add(this);
     }
-}
+}*/
 
 //Ver. ManyToMany 단방향
 /*package com.sparta.jpaadvance.entity;
