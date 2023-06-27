@@ -1,4 +1,21 @@
-//ManyToOne 단방향 & 양방향
+//Ver. OneToMany 단방향 양방향
+package com.sparta.jpaadvance.entity;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Getter
+@Setter
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+}
+/*//ManyToOne 단방향 & 양방향
 package com.sparta.jpaadvance.entity;
 
 import jakarta.persistence.*;
@@ -25,7 +42,7 @@ public class User {
         this.foodList.add(food);
         food.setUser(this); // 외래 키(연관 관계) 설정
     }
-}
+}*/
 /*
 //OneToOne 단방향 & 양방향
 package com.sparta.jpaadvance.entity;
