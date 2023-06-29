@@ -1,6 +1,7 @@
 //Ver. 중간테이블
 package com.sparta.jpaadvance.entity;
 
+import com.zaxxer.hikari.util.FastList;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,8 +19,10 @@ public class User {
     private Long id;
     private String name;
 
+    /*@OneToMany(mappedBy = "user")
+    private List<Order> orderList = new ArrayList<>();*/
     @OneToMany(mappedBy = "user")
-    private List<Order> orderList = new ArrayList<>();
+    private List<Food> foodList = new ArrayList<>();
 }
 
 /*

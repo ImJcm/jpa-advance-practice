@@ -19,8 +19,11 @@ public class Food {
     private String name;
     private double price;
 
-    @OneToMany(mappedBy = "food")
-    private List<Order> orderList = new ArrayList<>();
+    /*@OneToMany(mappedBy = "food")
+    private List<Order> orderList = new ArrayList<>();*/
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    private User user;
 }
 
 /*//Ver. ManyToMany 양방향
