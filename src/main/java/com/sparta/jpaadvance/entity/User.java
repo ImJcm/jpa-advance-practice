@@ -23,6 +23,11 @@ public class User {
     private List<Order> orderList = new ArrayList<>();*/
     @OneToMany(mappedBy = "user")
     private List<Food> foodList = new ArrayList<>();
+
+    public void addFoodList(Food food) {
+        this.foodList.add(food);
+        food.setUser(this); //외래키 설정
+    }
 }
 
 /*
